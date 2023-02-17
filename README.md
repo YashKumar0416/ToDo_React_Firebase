@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Firebase Setup is Required || Live Link - https://fir-react-bef6f.web.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

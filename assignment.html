@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <div class="main_container">
+        <div class="outer_box">
+            <h1>Assignment 2</h1>
+            <div><input class="input_fields" type="text" name="sentence" id="sentence" value="" placeholder="Enter Sentence"></div>
+            <div><input class="input_fields" type="text" name="letter" id="letter" maxlength="1" placeholder="Enter Letter to Search"></div>
+            <button class="btn" onclick="findInSentence()">Find</button>
+            <h4 id="result">Result: </h4>
+        </div>
+    </div>
+    <script>
+        function findInSentence() {
+            let str = document.getElementById("sentence").value
+            let char = document.getElementById("letter").value
+
+            let index = str.indexOf(char)
+            if(index === -1) {
+                document.getElementById("result").innerHTML = "Result: " + "The letter does not exist in the sentence"
+                document.getElementById("result").style.color = "red"
+            } else {
+                document.getElementById("result").innerHTML = "Result: " + str.substr(index+1,str.length-1)
+                document.getElementById("result").style.color = "green"
+            }
+            return index
+        };
+    </script>
+</body>
+</html>
